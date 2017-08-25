@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F6F6"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <!--</LinearLayout>-->
+
+    <!--上半部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btSaveSts"
+                    style="@style/setting_button_sytle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="保存货道"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btSetChangedAll"
+                    style="@style/setting_button_sytle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_weight="1"
+                    android:text="设置全部上报"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btSynchGds"
+                    style="@style/setting_button_sytle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="重置同步商品信息"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btSetCnt255"
+                    style="@style/setting_button_sytle"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_weight="1"
+                    android:text="设置剩余商品数量为255"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btSelectGd"
+                    style="@style/setting_button_sytle"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_weight="1"
+                    android:text="确定货物"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--下半部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dip"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/lstSt"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1.5"
+            android:descendantFocusability="afterDescendants"
+            android:divider="#ccc"
+            android:dividerHeight="5dp" />
+
+        <ListView
+            android:id="@+id/lstGd"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="2.5"
+            android:divider="#ccc"
+            android:dividerHeight="5dp" />
+    </LinearLayout>
+</LinearLayout>

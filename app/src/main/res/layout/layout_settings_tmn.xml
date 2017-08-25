@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:Android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    Android:layout_width="match_parent"
+    Android:layout_height="match_parent"
+    Android:background="@android:color/white"
+    Android:orientation="vertical">
+
+    <ScrollView
+        Android:layout_width="match_parent"
+        Android:layout_height="match_parent"
+        Android:fadingEdge="vertical"
+        Android:scrollbars="vertical">
+
+        <LinearLayout
+            Android:id="@+id/log_info"
+            Android:layout_width="fill_parent"
+            Android:layout_height="wrap_content"
+            Android:layout_margin="5dp"
+            Android:gravity="center"
+            Android:orientation="vertical"
+            Android:visibility="visible">
+
+            <LinearLayout
+                Android:id="@+id/cfg_info"
+                Android:layout_width="fill_parent"
+                Android:layout_height="wrap_content"
+                Android:layout_margin="5dp"
+                Android:gravity="center"
+                Android:orientation="vertical"
+                Android:visibility="visible">
+
+                <LinearLayout
+                    Android:layout_width="fill_parent"
+                    Android:layout_height="wrap_content"
+                    Android:orientation="horizontal"
+                    Android:padding="5dp">
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content"
+                        Android:orientation="horizontal"
+                        Android:padding="5dp">
+
+                        <TextView
+                            Android:layout_width="wrap_content"
+                            Android:layout_height="wrap_content"
+                            Android:text="设备号:"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <!--<EditText-->
+                        <!--Android:id="@+id/etDeviceno"-->
+                        <!--Android:layout_width="120dp"-->
+                        <!--Android:layout_height="wrap_content" />-->
+
+                        <EditText
+                            Android:id="@+id/etDeviceno"
+                            Android:layout_width="fill_parent"
+                            Android:layout_height="50dip"
+                            Android:layout_marginLeft="12.0dip"
+                            Android:layout_marginRight="12.0dip"
+                            Android:background="@drawable/edittext_focused"
+                            Android:drawablePadding="15.0dip"
+                            Android:ems="10"
+                            Android:hint="请输入终端设备号"
+                            Android:inputType="text"
+                            Android:paddingBottom="2.0dip"
+                            Android:paddingLeft="15.0dip"
+                            Android:paddingRight="15.0dip"
+                            Android:paddingTop="2.0dip"
+                            Android:singleLine="true"
+                            Android:textColorHint="#ff999999"
+                            Android:textSize="20sp" />
+
+                        <Button
+                            Android:id="@+id/btOnlineCfg"
+                            style="@style/setting_button_sytle"
+                            Android:layout_width="wrap_content"
+                            Android:layout_height="64.0dip"
+                            Android:layout_marginLeft="6.0dip"
+                            Android:layout_marginRight="6.0dip"
+                            Android:digits="1234567890"
+                            Android:singleLine="true"
+                            Android:text="在线获取配置"
+                            Android:textColor="@color/white"
+                            Android:textSize="18.0sp" />
+
+                        <!--<Button-->
+                        <!--Android:id="@+id/btOnlineCfg"-->
+                        <!--Android:layout_width="wrap_content"-->
+                        <!--Android:layout_height="wrap_content"-->
+                        <!--Android:layout_marginLeft="10dp"-->
+                        <!--Android:digits="1234567890"-->
+                        <!--Android:text="在线获取配置" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content"
+                        Android:layout_marginTop="10dp"
+                        Android:gravity="center_vertical"
+                        Android:orientation="horizontal">
+
+                        <TextView
+                            Android:id="@+id/info"
+                            Android:layout_width="wrap_content"
+                            Android:layout_height="wrap_content"
+                            Android:layout_marginLeft="50dp"
+                            Android:text="提示信息"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    Android:layout_width="match_parent"
+                    Android:layout_height="wrap_content"
+                    Android:layout_margin="5dp"
+                    Android:orientation="horizontal"
+                    Android:padding="5dp">
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content"
+                        Android:layout_marginLeft="5dp">
+
+                        <TextView
+                            Android:layout_width="wrap_content"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text="调试"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <com.landfone.mt.ui.SwitchButton
+                            Android:id="@+id/swDbg"
+                            Android:layout_width="wrap_content"
+                            Android:layout_height="wrap_content"
+                            Android:layout_marginLeft="3dp"
+                            app:sb_show_indicator="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content"
+                        Android:layout_marginLeft="5dp">
+
+                        <TextView
+                            Android:layout_width="wrap_content"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text="扫码测试"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <com.landfone.mt.ui.SwitchButton
+                            Android:id="@+id/swWATest"
+                            Android:layout_width="wrap_content"
+                            Android:layout_height="wrap_content"
+                            Android:layout_marginLeft="3dp"
+                            app:sb_show_indicator="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content"
+                        Android:layout_marginLeft="5dp">
+
+                        <TextView
+                            Android:layout_width="wrap_content"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text="扫码支付"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <com.landfone.mt.ui.SwitchButton
+                            Android:id="@+id/swWA"
+                            Android:layout_width="wrap_content"
+                            Android:layout_height="wrap_content"
+                            Android:layout_marginLeft="3dp"
+                            app:sb_show_indicator="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    Android:layout_width="match_parent"
+                    Android:layout_height="wrap_content"
+                    Android:layout_margin="5dp"
+                    Android:orientation="horizontal"
+                    Android:padding="5dp">
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content">
+
+                        <TextView
+                            Android:layout_width="100dp"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text="  密  码:"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <EditText
+                            Android:id="@+id/etPwd"
+                            Android:layout_width="250dp"
+                            Android:layout_height="50dip"
+                            Android:layout_marginLeft="12.0dip"
+                            Android:layout_marginRight="12.0dip"
+                            Android:background="@drawable/edittext_focused"
+                            Android:drawablePadding="15.0dip"
+                            Android:ems="10"
+                            Android:inputType="text"
+                            Android:paddingBottom="2.0dip"
+                            Android:paddingLeft="15.0dip"
+                            Android:paddingRight="15.0dip"
+                            Android:paddingTop="2.0dip"
+                            Android:singleLine="true"
+                            Android:textColorHint="#ff999999"
+                            Android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content">
+
+                        <TextView
+                            Android:layout_width="100dp"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text="经销商号:"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <EditText
+                            Android:id="@+id/etTmn"
+                            Android:background="@drawable/edittext_focused"
+                            Android:layout_width="250dp"
+                            Android:layout_height="50dip"
+                            Android:layout_marginLeft="12.0dip"
+                            Android:layout_marginRight="12.0dip"
+                            Android:drawablePadding="15.0dip"
+                            Android:ems="10"
+                            Android:inputType="text"
+                            Android:paddingBottom="2.0dip"
+                            Android:paddingLeft="15.0dip"
+                            Android:paddingRight="15.0dip"
+                            Android:paddingTop="2.0dip"
+                            Android:singleLine="true"
+                            Android:textColorHint="#ff999999"
+                            Android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    Android:layout_width="match_parent"
+                    Android:layout_height="wrap_content"
+                    Android:layout_margin="5dp"
+                    Android:orientation="horizontal"
+                    Android:padding="5dp">
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content">
+
+                        <TextView
+                            Android:layout_width="100dp"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text="商户号:"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <EditText
+                            Android:background="@drawable/edittext_focused"
+                            Android:id="@+id/etMer"
+                            Android:layout_width="250dp"
+                            Android:layout_height="50dip"
+                            Android:layout_marginLeft="12.0dip"
+                            Android:layout_marginRight="12.0dip"
+                            Android:drawablePadding="15.0dip"
+                            Android:ems="10"
+                            Android:inputType="text"
+                            Android:paddingBottom="2.0dip"
+                            Android:paddingLeft="15.0dip"
+                            Android:paddingRight="15.0dip"
+                            Android:paddingTop="2.0dip"
+                            Android:singleLine="true"
+                            Android:textColorHint="#ff999999"
+                            Android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content">
+
+                        <TextView
+                            Android:layout_width="100dp"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text=" 机 构 号:"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <EditText
+                            Android:id="@+id/etOrg"
+                            Android:layout_width="250dp"
+                            Android:layout_height="50dip"
+                            Android:layout_marginLeft="12.0dip"
+                            Android:layout_marginRight="12.0dip"
+                            Android:drawablePadding="15.0dip"
+                            Android:background="@drawable/edittext_focused"
+                            Android:ems="10"
+                            Android:inputType="text"
+                            Android:paddingBottom="2.0dip"
+                            Android:paddingLeft="15.0dip"
+                            Android:paddingRight="15.0dip"
+                            Android:paddingTop="2.0dip"
+                            Android:singleLine="true"
+                            Android:textColorHint="#ff999999"
+                            Android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    Android:layout_width="match_parent"
+                    Android:layout_height="wrap_content"
+                    Android:layout_margin="5dp"
+                    Android:orientation="horizontal"
+                    Android:padding="5dp">
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content">
+
+                        <TextView
+                            Android:layout_width="100dp"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text="signkey:"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <EditText
+                            Android:id="@+id/etSignkey"
+                            Android:layout_width="250dp"
+                            Android:background="@drawable/edittext_focused"
+                            Android:layout_height="50dip"
+                            Android:layout_marginLeft="12.0dip"
+                            Android:layout_marginRight="12.0dip"
+                            Android:drawablePadding="15.0dip"
+                            Android:ems="10"
+                            Android:inputType="text"
+                            Android:paddingBottom="2.0dip"
+                            Android:paddingLeft="15.0dip"
+                            Android:paddingRight="15.0dip"
+                            Android:paddingTop="2.0dip"
+                            Android:singleLine="true"
+                            Android:textColorHint="#ff999999"
+                            Android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content">
+
+                        <TextView
+                            Android:layout_width="100dp"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text="     I P:"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <EditText
+                            Android:id="@+id/etIP"
+                            Android:layout_width="250dp"
+                            Android:layout_height="50dip"
+                            Android:layout_marginLeft="12.0dip"
+                            Android:background="@drawable/edittext_focused"
+                            Android:layout_marginRight="12.0dip"
+                            Android:drawablePadding="15.0dip"
+                            Android:ems="10"
+                            Android:inputType="text"
+                            Android:paddingBottom="2.0dip"
+                            Android:paddingLeft="15.0dip"
+                            Android:paddingRight="15.0dip"
+                            Android:paddingTop="2.0dip"
+                            Android:singleLine="true"
+                            Android:textColorHint="#ff999999"
+                            Android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    Android:layout_width="match_parent"
+                    Android:layout_height="wrap_content"
+                    Android:layout_margin="5dp"
+                    Android:orientation="horizontal"
+                    Android:padding="5dp">
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content">
+
+                        <TextView
+                            Android:layout_width="100dp"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text="  端  口:"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <EditText
+                            Android:id="@+id/etPort"
+                            Android:background="@drawable/edittext_focused"
+                            Android:layout_width="250dp"
+                            Android:layout_height="50dip"
+                            Android:layout_marginLeft="12.0dip"
+                            Android:layout_marginRight="12.0dip"
+                            Android:drawablePadding="15.0dip"
+                            Android:ems="10"
+                            Android:inputType="text"
+                            Android:paddingBottom="2.0dip"
+                            Android:paddingLeft="15.0dip"
+                            Android:paddingRight="15.0dip"
+                            Android:paddingTop="2.0dip"
+                            Android:singleLine="true"
+                            Android:textColorHint="#ff999999"
+                            Android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content">
+
+                        <TextView
+                            Android:layout_width="100dp"
+                            Android:layout_height="wrap_content"
+                            Android:layout_gravity="center_vertical"
+                            Android:text="  网  址:"
+                            Android:textColor="@color/black"
+                            Android:textSize="20sp" />
+
+                        <EditText
+                            Android:id="@+id/etUrl"
+                            Android:background="@drawable/edittext_focused"
+                            Android:layout_width="250dp"
+                            Android:layout_height="50dip"
+                            Android:layout_marginLeft="12.0dip"
+                            Android:layout_marginRight="12.0dip"
+                            Android:drawablePadding="15.0dip"
+                            Android:ems="10"
+                            Android:inputType="text"
+                            Android:paddingBottom="2.0dip"
+                            Android:paddingLeft="15.0dip"
+                            Android:paddingRight="15.0dip"
+                            Android:paddingTop="2.0dip"
+                            Android:singleLine="true"
+                            Android:textColorHint="#ff999999"
+                            Android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    Android:layout_width="match_parent"
+                    Android:layout_height="wrap_content"
+                    Android:orientation="horizontal"
+                    Android:padding="15dp">
+
+                    <LinearLayout
+                        Android:layout_width="wrap_content"
+                        Android:layout_height="wrap_content"
+                        Android:layout_gravity="right"
+                        Android:orientation="horizontal">
+
+                        <Button
+                            Android:id="@+id/btExit"
+                            style="@style/setting_button_sytle"
+                            Android:layout_width="120dp"
+                            Android:layout_height="64.0dip"
+                            Android:layout_marginLeft="6.0dip"
+                            Android:layout_marginRight="6.0dip"
+                            Android:singleLine="true"
+                            Android:text="退出应用"
+                            Android:textColor="@color/white"
+                            Android:textSize="18.0sp" />
+
+                        <Button
+                            Android:id="@+id/btSaveCfg"
+                            style="@style/setting_button_sytle"
+                            Android:layout_width="120dp"
+                            Android:layout_height="64.0dip"
+                            Android:layout_marginLeft="6.0dip"
+                            Android:layout_marginRight="6.0dip"
+                            Android:singleLine="true"
+                            Android:text="保存"
+                            Android:textColor="@color/white"
+                            Android:textSize="18.0sp" />
+                    </LinearLayout>
+
+                    <Button
+                        Android:id="@+id/btCancel"
+                        Android:layout_width="100dp"
+                        Android:layout_height="wrap_content"
+                        Android:layout_weight="1"
+                        Android:text="取消"
+                        Android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

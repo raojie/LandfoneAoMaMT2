@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">壁挂式卫生棉售货机1</string>
+    <string name="footer_name">福建朗方信息技术有限公司</string>
+    <string name="pay_type_alip">支付宝支付</string>
+    <string name="pay_type_pos">POS支付</string>
+    <string name="pay_type_wechat">微信支付</string>
+</resources>

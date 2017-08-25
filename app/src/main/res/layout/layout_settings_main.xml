@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical">
+    <LinearLayout
+        android:layout_width="212dip"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F0F3F6"
+        >
+
+
+        <LinearLayout style="@style/wrap_layout" >
+            <!-- 上圆角-->
+            <LinearLayout style="@style/top_layout" android:id="@+id/tmnsettings">
+                <TextView style="@style/usertext" android:text="终端配置" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/view_line"/>
+            <!-- 上圆角-->
+            <LinearLayout style="@style/top_layout" android:id="@+id/statics" >
+                <TextView style="@style/usertext" android:text="总销售统计"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/view_line"/>
+            <!-- 下圆角-->
+            <LinearLayout style="@style/bottom_layout" android:id="@+id/trades" >
+                <TextView style="@style/usertext" android:text="查看交易"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/wrap_layout" >
+            <!-- 无圆角-->
+            <LinearLayout style="@style/mid_layout" android:id="@+id/refill" >
+                <TextView style="@style/usertext" android:text="补货"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/view_line"/>
+            <!-- 下圆角-->
+            <LinearLayout style="@style/bottom_layout" android:id="@+id/storageCust" >
+                <TextView style="@style/usertext" android:text="设计货道"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/wrap_layout" >
+            <!-- 下圆角-->
+            <LinearLayout style="@style/bottom_layout" android:id="@+id/storageType">
+                <TextView style="@style/usertext" android:text="货道类型" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/view_line"/>
+            <!-- 下圆角-->
+            <LinearLayout style="@style/bottom_layout" android:id="@+id/storageTest" >
+                <TextView style="@style/usertext" android:text="货道测试"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/view_line"/>
+            <!-- 下圆角-->
+            <LinearLayout style="@style/bottom_layout" android:id="@+id/netTest" >
+                <TextView style="@style/usertext" android:text="联网测试"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 全圆角-->
+        <LinearLayout style="@style/wrap_layout">
+            <LinearLayout style="@style/single_layout" android:id="@+id/language">
+                <TextView style="@style/usertext" android:text="语言"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 全圆角-->
+        <LinearLayout style="@style/wrap_layout">
+            <LinearLayout style="@style/single_layout" android:id="@+id/useStatistics">
+                <TextView style="@style/usertext" android:text="使用统计"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 全圆角-->
+        <LinearLayout style="@style/wrap_layout"
+            android:visibility="gone">
+            <LinearLayout style="@style/single_layout" android:id="@+id/refund">
+                <TextView style="@style/usertext" android:text="退款"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 全圆角-->
+        <LinearLayout style="@style/wrap_layout"
+            android:visibility="gone">
+            <LinearLayout style="@style/single_layout" android:id="@+id/update">
+                <TextView style="@style/usertext" android:text="检查与更新"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/wrap_layout">
+
+            <LinearLayout style="@style/single_layout" android:id="@+id/logout">
+                <TextView style="@style/usertext" android:text="退出设置"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/view_line"/>
+            <LinearLayout style="@style/single_layout" android:id="@+id/exitApp">
+                <TextView style="@style/usertext" android:text="退出应用"/>
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="788dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+    </FrameLayout>
+
+    <!--fragment
+        android:id="@+id/right_frag"
+        android:name="com.landfone.settings.SettingsRight"
+        android:layout_width="638dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:layout="@layout/settings_statics" /-->
+
+
+</LinearLayout>

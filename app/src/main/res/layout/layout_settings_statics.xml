@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F6F6"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="总销售统计"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout style="@style/wrap_layout">
+
+        <LinearLayout style="@style/top_layout">
+
+            <LinearLayout style="@style/tb_layout">
+
+                <LinearLayout style="@style/grid_layout">
+
+                    <TextView
+                        style="@style/usertext"
+                        android:text="销售次数：" />
+
+                    <TextView
+                        android:id="@+id/totalCnt"
+                        style="@style/usertext"
+                        android:text="..." />
+                </LinearLayout>
+
+                <LinearLayout style="@style/grid_layout">
+
+                    <TextView
+                        style="@style/usertext"
+                        android:text="销售金额：" />
+
+                    <TextView
+                        android:id="@+id/totalAmt"
+                        style="@style/usertext"
+                        android:text="..." />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/view_line" />
+
+        <LinearLayout style="@style/top_layout">
+
+            <LinearLayout style="@style/tb_layout">
+
+                <LinearLayout style="@style/grid_layout">
+
+                    <TextView
+                        style="@style/usertext"
+                        android:text="微信次数：" />
+
+                    <TextView
+                        android:id="@+id/wxpayCnt"
+                        style="@style/usertext"
+                        android:text="..." />
+                </LinearLayout>
+
+                <LinearLayout style="@style/grid_layout">
+
+                    <TextView
+                        style="@style/usertext"
+                        android:text="微信金额：" />
+
+                    <TextView
+                        android:id="@+id/wxpayAmt"
+                        style="@style/usertext"
+                        android:text="..." />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/top_layout">
+
+            <LinearLayout style="@style/tb_layout">
+
+                <LinearLayout style="@style/grid_layout">
+
+                    <TextView
+                        style="@style/usertext"
+                        android:text="POS次数：" />
+
+                    <TextView
+                        android:id="@+id/posCnt"
+                        style="@style/usertext"
+                        android:text="..." />
+                </LinearLayout>
+
+                <LinearLayout style="@style/grid_layout">
+
+                    <TextView
+                        style="@style/usertext"
+                        android:text="POS金额：" />
+
+                    <TextView
+                        android:id="@+id/posAmt"
+                        style="@style/usertext"
+                        android:text="..." />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/top_layout">
+
+            <LinearLayout style="@style/tb_layout">
+
+                <LinearLayout style="@style/grid_layout">
+
+                    <TextView
+                        style="@style/usertext"
+                        android:text="支付宝次数：" />
+
+                    <TextView
+                        android:id="@+id/alipayCnt"
+                        style="@style/usertext"
+                        android:text="..." />
+                </LinearLayout>
+
+                <LinearLayout style="@style/grid_layout">
+
+                    <TextView
+                        style="@style/usertext"
+                        android:text="支付宝金额：" />
+
+                    <TextView
+                        android:id="@+id/alipayAmt"
+                        style="@style/usertext"
+                        android:text="..." />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="50dp"
+            android:text="点击重置按钮可以把统计数据重置"
+            android:textSize="20dip" />
+
+        <Button
+            android:id="@+id/btReset"
+            style="@style/setting_button_sytle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="重置"
+            android:textSize="30sp" />
+    </LinearLayout>
+</LinearLayout>

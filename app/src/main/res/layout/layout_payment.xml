@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <!--
+            android:background="#A095C4"-->
+            <ImageView
+                android:id="@+id/itemPic"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10sp"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/itemName"
+                    style="@style/shadowStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="名称"
+                    android:textSize="25dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/itemPrice"
+                    style="@style/shadowStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.01"
+                    android:textSize="30dp" />
+
+                <TextView
+                    style="@style/shadowStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 元"
+                    android:textSize="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnCancelPay"
+                    android:layout_width="120sp"
+                    android:layout_height="120sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/left_back_small" />
+
+                <TextView
+                    android:id="@+id/back_text"
+                    style="@style/shadowStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="返回"
+                    android:textColor="#7597B3" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/WAOrderNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:visibility="gone">
+
+                <requestFocus />
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <!--提示信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30sp"
+                        android:layout_marginRight="30sp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/info3"
+                            style="@style/shadowStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="info3"
+                            android:textSize="38dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/info1"
+                            style="@style/shadowStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="info1"
+                            android:textSize="38dp" />
+
+                        <TextView
+                            android:id="@+id/info2"
+                            style="@style/shadowStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="info2"
+                            android:textSize="38dp" />
+                        <!--
+                            android:src="@drawable/left_back"-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--选项-->
+                <LinearLayout
+                    android:id="@+id/ll_choices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="50sp"
+                    android:layout_marginTop="20sp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/pay_sel_wx"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20sp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/wx_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btnWeChatPay"
+                                android:layout_width="200sp"
+                                android:layout_height="200sp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/pay_type_wx"></Button>
+
+                            <TextView
+                                android:id="@+id/wx_text"
+                                style="@style/shadowStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/pay_type_wechat"
+                                android:textColor="#7597B3"></TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pay_sel_alp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20sp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/alp_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btnAliPay"
+                                android:layout_width="200sp"
+                                android:layout_height="200sp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/pay_type_alipay"></Button>
+
+                            <TextView
+                                android:id="@+id/alp_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/pay_type_alip"
+                                android:textColor="#7597B3"></TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pay_sel_pos"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20sp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/pos_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btnPOSPay"
+                                android:layout_width="200sp"
+                                android:layout_height="200sp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/pay_type_union"></Button>
+
+                            <TextView
+                                android:id="@+id/pos_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/pay_type_pos"
+                                android:textColor="#7597B3"></TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--选择支付方式后，显示-->
+
+                </LinearLayout>
+
+
+                <!--已选-->
+                <LinearLayout
+                    android:id="@+id/ll_choose"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <WebView
+                        android:id="@+id/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/qrcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:maxHeight="280sp" />
+
+                    <ImageView
+                        android:id="@+id/choice_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pay_type_alipay"
+                        android:visibility="gone"></ImageView>
+
+                    <TextView
+                        android:id="@+id/choice_text"
+                        style="@style/shadowStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="选择的支付方式"
+                        android:textColor="#7597B3"
+                        android:textSize="48sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,6 +1,4 @@
-package com.landfone.ui.activity;
-
-import android.os.Bundle;
+package com.landfone.ui;
 
 import com.landfone.R;
 import com.landfone.ui.base.BaseActivity;
@@ -35,6 +33,6 @@ public class InitActivity extends BaseActivity{
 
     @Override
     public void configViews() {
-
+        hideWindowFeature();
     }
 }

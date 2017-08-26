@@ -2,6 +2,8 @@ package com.landfone.ui.base;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 
 import butterknife.ButterKnife;
 
@@ -40,4 +42,16 @@ public abstract class BaseActivity extends Activity {
      * 对各种控件进行设置、适配、填充数据
      */
     public abstract void configViews();
+
+    public void hideWindowFeature() {
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        /**
+         * 具体根据系统定义，frameworks/base/core/java/android/view/View.java
+         * 8-全屏，2-hide navi(home,back…)，1-游戏或电子书模式
+         */
+        getWindow().getDecorView().setSystemUiVisibility(8);
+    }
 }
